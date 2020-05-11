@@ -14,7 +14,7 @@ app.get('/genres/:id', getGenreByIdWithNovelsAndAuthors)
 app.get('/novels', getAllNovelsWithAuthorAndGenres)
 app.get('/novels/:id', getNovelByIdWithAuthorAndGenres)
 
-app.all('*', (request, responce) => responce.status('404')
+app.all('*', (request, response) => response.status('404')
   .send('A poet can survive everything but a 404 ERROR. - Oscar Wilde'))
 
 app.listen(1337, () => {
