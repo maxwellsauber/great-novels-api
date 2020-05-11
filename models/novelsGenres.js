@@ -1,0 +1,14 @@
+const novelsGenres = (connection, sequelize, genres, novels) => {
+  return connection.define('novelsGenres', {
+    genreId: { type: sequelize.INTEGER, primaryKey: true, references: { model: genres, key: 'id' } },
+    novelId: { type: sequelize.STRING, primaryKey: true, references: { model: novels, key: 'id' } },
+  }, {
+    defaultScope: {
+      attributes: { exclude: ['deletedAt'] }
+    }
+  }, {
+    paranoid: true
+  })
+}
+
+module.exports = novelsGenres
