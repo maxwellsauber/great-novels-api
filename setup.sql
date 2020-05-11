@@ -99,51 +99,51 @@ INSERT INTO novels (title, authorId) VALUES ("Animal Farm", 13);
 INSERT INTO novels (title, authorId) VALUES ("The Time Machine", 14);
 INSERT INTO novels (title, authorId) VALUES ("Things Fall Apart", 15);
 
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,1); /* Dracula - Fiction,Horror,Fantasy */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,1);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (11,1);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (6,1);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,2); /* The Picture of Dorian Gray -	Fiction,Horror,Gothic,Fantasy */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,2);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (11,2);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (9,2);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (6,2);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,3); /* The Color Purple - Fiction,Historical Fiction */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,3);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (10,3);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,4); /* War and Peace - Fiction,Historical Fiction,War,Russian Literature */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,4);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (10,4);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (19,4);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (15,4);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,5); /* A Tale of Two Cities - Fiction,Historical Fiction */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,5);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (10,5);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,6); /* The Crucible - Fiction,Historical Fiction,Drama,Plays */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,6);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (10,6);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (4,6);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (14,6);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,7); /* The Three Musketeers - Fiction,Historical Fiction,Adventure,French Literature */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,7);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (10,7);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (1,7);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (8,7);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,8); /* The Hound of the Baskervilles - Fiction,Mystery,Crime,Thriller */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,8);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (13,8);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (3,8);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (17,8);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,9); /* The Strange Case of Dr. Jekyll and Mr. Hyde - Fiction,Mystery,Science Fiction,Horror */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,9);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (13,9);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (16,9);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (11,9);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,10); /* Crime and Punishment - Fiction,Russian Literature,Mystery */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,10);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (15,10);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (13,10);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,11); /* Murder on the Orient Express - Fiction,Mystery */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,11);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (13,11);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,12); /* Fahrenheit 451 - Fiction,Science Fiction,Dystopia */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,12);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (16,12);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (5,12);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,13); /* Animal Farm - Fiction,Science Fiction,Dystopia */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,13);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (16,13);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (5,13);
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,14); /* The Time Machine - Fiction,Science Fiction,Time Travel */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,14);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (16,14); 
 INSERT INTO novelsGenres (genreId, novelId) VALUES (18,14); 
-INSERT INTO novelsGenres (genreId, novelId) VALUES (7,15); /* Things Fall Apart - Fiction,Historical Fiction,African Literature */
+INSERT INTO novelsGenres (genreId, novelId) VALUES (7,15);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (10,15);
 INSERT INTO novelsGenres (genreId, novelId) VALUES (2,15);
