@@ -6,7 +6,8 @@ const getAllAuthors = async (request, response) => {
 
     return response.send(allAuthors)
   } catch (error) {
-    return response.status(500).send('500 ERROR - Could not getAllAuthors')
+    return response.status(500)
+      .send('I try to create sympathy for my characters, then turn the 500 ERROR monsters loose. - Stephen King')
   }
 }
 
@@ -23,9 +24,10 @@ const getAuthorByIdWithNovelsAndGenres = async (request, response) => {
 
     return matchingAuthor
       ? response.send(matchingAuthor)
-      : response.status(404).send(`No author matching ${id}`)
+      : response.status(404)
+        .send(`To produce a mighty book, you must choose a mighty theme, but not "${id}" - Herman Melville`)
   } catch (error) {
-    return response.status(500).send('500 ERROR - Could not getAuthorByIdWithNovelsAndGenres')
+    return response.status(500).send('500 ERRORs are architecture, not interior decoration. - Ernest Hemingway')
   }
 }
 

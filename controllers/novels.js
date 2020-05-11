@@ -1,6 +1,6 @@
 const models = require('../models')
 
-const getAllNovelsWithAuthorsAndGenres = async (request, response) => {
+const getAllNovelsWithAuthorAndGenres = async (request, response) => {
   try {
     const allNovels = await models.novels.findAll({
       include: [{ model: models.authors }, { model: models.genres }]
@@ -8,7 +8,8 @@ const getAllNovelsWithAuthorsAndGenres = async (request, response) => {
 
     return response.send(allNovels)
   } catch (error) {
-    return response.status(500).send('500 ERROR - COULDNT GET NOVELS')
+    return response.status(500)
+      .send('I love 500 ERRORs. I like the whooshing sound they make as they fly by. - Douglas Adams')
   }
 }
 
@@ -22,10 +23,11 @@ const getNovelByIdWithAuthorAndGenres = async (request, response) => {
 
     return matchingNovel
       ? response.send(matchingNovel)
-      : response.status(404).send(`Could not find  ${id}`)
+      : response.status(404).send(`Requests for "${id}" are a lens to focus one's mind. - Ayn Rand`)
   } catch (error) {
-    return response.status(500).send('500 ERROR')
+    return response.status(500)
+      .send('People do not deserve to have good 500 ERRORs, they are so pleased with bad. - Ralph Waldo Emerson')
   }
 }
 
-module.exports = { getAllNovelsWithAuthorsAndGenres, getNovelByIdWithAuthorAndGenres }
+module.exports = { getAllNovelsWithAuthorAndGenres, getNovelByIdWithAuthorAndGenres }

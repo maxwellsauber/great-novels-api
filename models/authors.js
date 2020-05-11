@@ -4,9 +4,7 @@ const authors = (connection, sequelize) => {
     nameFirst: { type: sequelize.STRING },
     nameLast: { type: sequelize.STRING }
   }, {
-    defaultScope: {
-      attributes: { exclude: ['deletedAt'] }
-    }
+    defaultScope: { attributes: { exclude: ['deletedAt'] } }
   }, {
     paranoid: true
   })

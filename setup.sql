@@ -28,7 +28,7 @@ CREATE TABLE genres (
 CREATE TABLE novels (
   id INT auto_increment,
   title VARCHAR(255) NOT NULL,
-  authorId INT,
+  authorId INT NOT NULL,
   createdAt DATETIME DEFAULT NOW(),
   updatedAt DATETIME DEFAULT NOW() ON UPDATE NOW(),
   deletedAt DATETIME,

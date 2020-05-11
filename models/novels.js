@@ -4,9 +4,7 @@ const novels = (connection, sequelize, authors) => {
     title: { type: sequelize.STRING },
     authorId: { type: sequelize.INTEGER, references: { model: authors, key: 'id' } }
   }, {
-    defaultScope: {
-      attributes: { exclude: ['deletedAt'] }
-    }
+    defaultScope: { attributes: { exclude: ['deletedAt'] } }
   }, {
     paranoid: true
   })

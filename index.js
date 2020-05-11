@@ -1,7 +1,7 @@
 const express = require('express')
 const { getAllAuthors, getAuthorByIdWithNovelsAndGenres } = require('./controllers/authors')
 const { getAllGenres, getGenreByIdWithNovelsAndAuthors } = require('./controllers/genres')
-const { getAllNovelsWithAuthorsAndGenres, getNovelByIdWithAuthorAndGenres } = require('./controllers/novels')
+const { getAllNovelsWithAuthorAndGenres, getNovelByIdWithAuthorAndGenres } = require('./controllers/novels')
 
 const app = express()
 
@@ -11,11 +11,12 @@ app.get('/authors/:id', getAuthorByIdWithNovelsAndGenres)
 app.get('/genres', getAllGenres)
 app.get('/genres/:id', getGenreByIdWithNovelsAndAuthors)
 
-app.get('/novels', getAllNovelsWithAuthorsAndGenres)
+app.get('/novels', getAllNovelsWithAuthorAndGenres)
 app.get('/novels/:id', getNovelByIdWithAuthorAndGenres)
 
-app.all('*', (req, res) => res.status('404').send('NOT FOUNDS'))
+app.all('*', (request, responce) => responce.status('404')
+  .send('A poet can survive everything but a 404 ERROR. - Oscar Wilde'))
 
 app.listen(1337, () => {
-  console.log('Listening on port 1337...') // eslint-disable-line no-console
+  console.log('Fiction is about stuff that\'s on PORT 1337. - Nancy Kress.') // eslint-disable-line no-console
 })

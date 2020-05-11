@@ -3,9 +3,7 @@ const genres = (connection, sequelize) => {
     id: { type: sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     name: { type: sequelize.STRING },
   }, {
-    defaultScope: {
-      attributes: { exclude: ['deletedAt'] }
-    }
+    defaultScope: { attributes: { exclude: ['deletedAt'] } }
   }, {
     paranoid: true
   })
