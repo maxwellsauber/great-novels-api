@@ -1,8 +1,8 @@
 const authors = (connection, sequelize) => {
   return connection.define('authors', {
     id: { type: sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-    nameFirst: { type: sequelize.STRING },
-    nameLast: { type: sequelize.STRING }
+    nameFirst: { type: sequelize.STRING, allowNull: false },
+    nameLast: { type: sequelize.STRING, allowNull: false }
   }, {
     defaultScope: { attributes: { exclude: ['deletedAt'] } }
   }, {
