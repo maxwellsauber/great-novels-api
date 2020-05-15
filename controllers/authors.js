@@ -14,7 +14,7 @@ const getAllAuthors = async (request, response) => {
 const getAuthorsByParamWithNovelsAndGenres = async (request, response) => {
   try {
     const { param } = request.params
-    const matchingAuthor = await models.authors.findAll({
+    const matchingAuthors = await models.authors.findAll({
       include: [{
         include: [{ model: models.genres }],
         model: models.novels
@@ -27,8 +27,8 @@ const getAuthorsByParamWithNovelsAndGenres = async (request, response) => {
       }
     })
 
-    return matchingAuthor
-      ? response.send(matchingAuthor)
+    return matchingAuthors
+      ? response.send(matchingAuthors)
       : response.status(404)
         .send(`To produce a mighty book, you must choose a mighty theme, but not "${param}" - Herman Melville`)
   } catch (error) {

@@ -16,7 +16,7 @@ const getAllNovelsWithAuthorAndGenres = async (request, response) => {
 const getNovelByParamWithAuthorAndGenres = async (request, response) => {
   try {
     const { param } = request.params
-    const matchingNovel = await models.novels.findAll({
+    const matchingNovels = await models.novels.findAll({
       include: [{ model: models.authors }, { model: models.genres }],
       where: {
         [models.Op.or]: [
@@ -26,8 +26,8 @@ const getNovelByParamWithAuthorAndGenres = async (request, response) => {
       }
     })
 
-    return matchingNovel
-      ? response.send(matchingNovel)
+    return matchingNovels
+      ? response.send(matchingNovels)
       : response.status(404).send(`Requests for "${param}" are a lens to focus one's mind. - Ayn Rand`)
   } catch (error) {
     return response.status(500)
