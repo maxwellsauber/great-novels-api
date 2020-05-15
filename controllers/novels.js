@@ -13,7 +13,7 @@ const getAllNovelsWithAuthorAndGenres = async (request, response) => {
   }
 }
 
-const getNovelByParamWithAuthorAndGenres = async (request, response) => {
+const getNovelsByParamWithAuthorAndGenres = async (request, response) => {
   try {
     const { param } = request.params
     const matchingNovels = await models.novels.findAll({
@@ -35,4 +35,4 @@ const getNovelByParamWithAuthorAndGenres = async (request, response) => {
   }
 }
 
-module.exports = { getAllNovelsWithAuthorAndGenres, getNovelByParamWithAuthorAndGenres }
+module.exports = { getAllNovelsWithAuthorAndGenres, getNovelsByParamWithAuthorAndGenres }
