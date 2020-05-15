@@ -11,24 +11,29 @@ const getAllAuthors = async (request, response) => {
   }
 }
 
-const getAuthorByIdWithNovelsAndGenres = async (request, response) => {
+const getAuthorsByParamWithNovelsAndGenres = async (request, response) => {
   try {
-    const { id } = request.params
-    const matchingAuthor = await models.authors.findOne({
+    const { param } = request.params
+    const matchingAuthor = await models.authors.findAll({
       include: [{
         include: [{ model: models.genres }],
         model: models.novels
       }],
-      where: { id }
+      where: {
+        [models.Op.or]: [
+          { id: { [models.Op.like]: param } },
+          { nameLast: { [models.Op.like]: `%${param.toLowerCase()}%` } }
+        ]
+      }
     })
 
     return matchingAuthor
       ? response.send(matchingAuthor)
       : response.status(404)
-        .send(`To produce a mighty book, you must choose a mighty theme, but not "${id}" - Herman Melville`)
+        .send(`To produce a mighty book, you must choose a mighty theme, but not "${param}" - Herman Melville`)
   } catch (error) {
     return response.status(500).send('500 ERRORs are architecture, not interior decoration. - Ernest Hemingway')
   }
 }
 
-module.exports = { getAllAuthors, getAuthorByIdWithNovelsAndGenres }
+module.exports = { getAllAuthors, getAuthorsByParamWithNovelsAndGenres }

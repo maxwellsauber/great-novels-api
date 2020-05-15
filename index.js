@@ -1,22 +1,22 @@
 const express = require('express')
-const { getAllAuthors, getAuthorByIdWithNovelsAndGenres } = require('./controllers/authors')
+const { getAllAuthors, getAuthorsByParamWithNovelsAndGenres } = require('./controllers/authors')
 const { getAllGenres, getGenreByIdWithNovelsAndAuthors } = require('./controllers/genres')
-const { getAllNovelsWithAuthorAndGenres, getNovelByIdWithAuthorAndGenres } = require('./controllers/novels')
+const { getAllNovelsWithAuthorAndGenres, getNovelByParamWithAuthorAndGenres } = require('./controllers/novels')
 
 const app = express()
 
 app.get('/authors', getAllAuthors)
-app.get('/authors/:id', getAuthorByIdWithNovelsAndGenres)
+app.get('/authors/:param', getAuthorsByParamWithNovelsAndGenres)
 
 app.get('/genres', getAllGenres)
 app.get('/genres/:id', getGenreByIdWithNovelsAndAuthors)
 
 app.get('/novels', getAllNovelsWithAuthorAndGenres)
-app.get('/novels/:id', getNovelByIdWithAuthorAndGenres)
+app.get('/novels/:param', getNovelByParamWithAuthorAndGenres)
 
 app.all('*', (request, response) => response.status('404')
   .send('A poet can survive everything but a 404 ERROR. - Oscar Wilde'))
 
-app.listen(1337, () => {
-  console.log('Fiction is about stuff that\'s on PORT 1337. - Nancy Kress.') // eslint-disable-line no-console
+app.listen(9990, () => {
+  console.log('Fiction is about stuff that\'s on PORT 9990. - Nancy Kress.') // eslint-disable-line no-console
 })

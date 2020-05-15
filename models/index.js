@@ -1,12 +1,17 @@
 
 const sequelize = require('sequelize')
+const allConfigs = require('../config/sequelize')
+
 const authorsModels = require('./authors')
 const novelsModels = require('./novels')
 const genresModels = require('./genres')
 const novelsGenresModels = require('./novelsGenres')
 
-const connection = new sequelize('greatNovels', 'greatNovels', 'N0vel$!', {
-  host: 'localhost', dialect: 'mysql'
+const environment = process.env.NODE_ENV || 'development'
+const config = allConfigs[environment]
+
+const connection = new sequelize(config.database, config.username, config.password, {
+  host: config.host, dialect: config.dialect
 })
 
 const authors = authorsModels(connection, sequelize)
@@ -20,4 +25,10 @@ novels.belongsTo(authors)
 novels.belongsToMany(genres, { through: novelsGenres })
 genres.belongsToMany(novels, { through: novelsGenres })
 
-module.exports = { authors, novels, genres, novelsGenres }
+module.exports = {
+  authors,
+  novels,
+  genres,
+  novelsGenres,
+  Op: sequelize.Op
+}
