@@ -26,7 +26,7 @@ const getNovelsByParamWithAuthorAndGenres = async (request, response) => {
       }
     })
 
-    return matchingNovels
+    return matchingNovels.length
       ? response.send(matchingNovels)
       : response.status(404).send(`Requests for "${param}" are a lens to focus one's mind. - Ayn Rand`)
   } catch (error) {
