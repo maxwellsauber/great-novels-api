@@ -124,12 +124,12 @@ module.exports = {
       Example:
       return queryInterface.dropTable('users');
     */
-    await queryInterface.bulkInsert('authors')
+    await queryInterface.bulkDelete('authors')
 
-    await queryInterface.bulkInsert('genres')
+    await queryInterface.bulkDelete('genres')
 
-    await queryInterface.bulkInsert('novelsGenres')
+    await queryInterface.bulkDelete('novelsGenres')
 
-    return queryInterface.bulkInsert('novels')
+    return queryInterface.bulkDelete('novels')
   }
 }
